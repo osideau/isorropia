@@ -17,6 +17,11 @@
   --tan:         #a88a5c;
   --tan-deep:    #8a6e42;
 
+  /* Blue — the cool counterweight to tan (Isorropia = balance) */
+  --blue:        #1a2238;
+  --blue-mid:    #2c3a5e;
+  --blue-accent: #43568a;
+
   /* Type system */
   --font-display: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
   --font-italic:  'Cormorant Garamond', 'Cormorant', Georgia, serif;
@@ -157,7 +162,7 @@ p {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--olive-mid);
+  color: var(--blue-accent);
   display: inline-block;
 }
 
@@ -182,10 +187,10 @@ p {
 }
 
 .section {
-  padding-block: clamp(3.5rem, 9vw, 8.5rem);
+  padding-block: clamp(3rem, 6vw, 6rem);
 }
 .section-sm {
-  padding-block: clamp(2.5rem, 6vw, 5rem);
+  padding-block: clamp(2rem, 4vw, 3.5rem);
 }
 .section-lg {
   padding-block: clamp(5rem, 12vw, 11rem);
@@ -226,6 +231,19 @@ p {
   font-size: 1.4rem;
   letter-spacing: 0.02em;
   color: var(--olive-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 1.35em;
+  height: 1.35em;
+  background-color: currentColor;
+  -webkit-mask: url("images/logo.svg") center / contain no-repeat;
+  mask: url("images/logo.svg") center / contain no-repeat;
+  flex: none;
 }
 .brand em {
   font-family: var(--font-italic);
@@ -260,7 +278,7 @@ p {
   right: 30%;
   bottom: 0;
   height: 1px;
-  background: var(--tan);
+  background: var(--blue-accent);
 }
 
 .nav-cta {
@@ -434,6 +452,19 @@ p {
   max-width: 14ch;
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
+.hero h1,
+.page-hero h1,
+.page-hero--image h1 {
+  line-height: 1.0;
+  letter-spacing: -0.018em;
+}
+.page-hero--image .eyebrow {
+  display: block;
+  margin-bottom: clamp(1.2rem, 2.5vw, 2rem);
+}
+.page-hero--image h1 {
+  margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+}
 
 .hero-actions {
   display: flex;
@@ -525,10 +556,10 @@ p {
   z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(12, 11, 9, 0.82) 0%,
-    rgba(12, 11, 9, 0.46) 40%,
-    rgba(12, 11, 9, 0.30) 70%,
-    rgba(12, 11, 9, 0.50) 100%
+    rgba(12, 11, 9, 0.90) 0%,
+    rgba(12, 11, 9, 0.60) 38%,
+    rgba(12, 11, 9, 0.46) 68%,
+    rgba(12, 11, 9, 0.66) 100%
   );
 }
 .hero-scrim::after {
@@ -607,7 +638,7 @@ p {
 
 /* ---------- Pause section ---------- */
 .pause {
-  padding-block: clamp(5rem, 11vw, 9rem);
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
   text-align: center;
 }
 .pause-line {
@@ -716,7 +747,7 @@ p {
 }
 .discipline {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: clamp(2rem, 5vw, 4rem);
   padding-block: clamp(1.8rem, 3.5vw, 2.8rem);
   border-bottom: var(--hairline);
@@ -727,14 +758,8 @@ p {
 .discipline:hover {
   background: rgba(139, 109, 82, 0.04);
 }
-.discipline-num {
-  font-family: var(--font-italic);
-  font-style: italic;
-  color: var(--tan);
-  font-size: 1.1rem;
-  font-weight: 400;
-  width: 2rem;
-}
+.discipline-num { display: none; }
+.numeral { display: none; }
 .discipline-name {
   font-family: var(--font-display);
   font-weight: 300;
@@ -759,7 +784,7 @@ p {
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--olive-mid);
+  color: var(--blue-accent);
 }
 .discipline-desc {
   font-size: 0.95rem;
@@ -770,11 +795,11 @@ p {
 }
 @media (max-width: 720px) {
   .discipline {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   .discipline-meta {
-    grid-column: 2;
+    grid-column: 1;
     text-align: left;
     align-items: flex-start;
   }
@@ -784,7 +809,7 @@ p {
 /* ---------- Pull quote ---------- */
 .pullquote {
   text-align: center;
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
 }
 .pullquote-text {
   font-family: var(--font-italic);
@@ -833,7 +858,7 @@ p {
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--tan);
+  color: var(--blue-accent);
   margin-bottom: 1rem;
 }
 .practitioner-bio {
@@ -915,7 +940,7 @@ p {
 
 /* ---------- Closing CTA ---------- */
 .closing {
-  padding-block: clamp(5rem, 11vw, 9rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
   text-align: center;
 }
 .closing h2 {
@@ -925,6 +950,10 @@ p {
 }
 .closing .eyebrow {
   margin-bottom: 1.5rem;
+  letter-spacing: 0.34em;
+}
+.closing .lead {
+  letter-spacing: 0.015em;
 }
 
 /* ---------- Footer ---------- */
@@ -991,11 +1020,15 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(235, 228, 214, 0.4);
 }
+.footer-base a { color: inherit; transition: color var(--med) var(--ease); }
+.footer-base a:hover { color: var(--tan); }
+.footer-legal { letter-spacing: 0.14em; }
 @media (max-width: 720px) {
   .footer-base {
     flex-direction: column;
@@ -1103,4 +1136,75 @@ p {
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 1;
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq { border-top: var(--hairline); }
+.faq details { border-bottom: var(--hairline); }
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding-block: clamp(1.4rem, 3vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  letter-spacing: -0.01em;
+  color: var(--olive-ink);
+  line-height: 1.2;
+  transition: color var(--med) var(--ease);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '+';
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--blue-accent);
+  flex: none;
+  line-height: 1;
+}
+.faq details[open] summary::after { content: '\2013'; }
+.faq summary:hover { color: var(--blue-accent); }
+.faq-answer {
+  padding-bottom: clamp(1.4rem, 3vw, 2rem);
+  max-width: 72ch;
+}
+.faq-answer p { color: var(--olive-soft); max-width: 72ch; }
+.faq-answer p + p { margin-top: 1rem; }
+
+/* ---------- Prose (policy pages) ---------- */
+.prose { max-width: 74ch; }
+.prose h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.prose h2:first-child { margin-top: 0; }
+.prose h3 {
+  font-size: 1.15rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  color: var(--olive-ink);
+}
+.prose p { margin-bottom: 1.1rem; color: var(--olive-soft); max-width: 74ch; }
+.prose ul { margin: 0 0 1.2rem 1.3rem; color: var(--olive-soft); max-width: 74ch; }
+.prose li { margin-bottom: 0.5rem; }
+.prose a {
+  color: var(--blue-accent);
+  border-bottom: 1px solid var(--blue-accent);
+  padding-bottom: 1px;
+}
+.prose a:hover { color: var(--tan); border-bottom-color: var(--tan); }
+.prose strong { font-weight: 500; color: var(--olive-ink); }
+.prose .updated {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--olive-mid);
+  margin-top: 3rem;
 }
