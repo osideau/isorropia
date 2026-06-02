@@ -17,6 +17,11 @@ suits the editorial-spa direction best.
 
 ---
 
+## Brand
+| File | Slot | Notes |
+|---|---|---|
+| `logo.svg` | Header + footer wordmark mark | Appears beside the “Isorropia” wordmark in the header and footer. It is rendered as a **single-colour mask** that automatically takes the brand colour (dark on light pages, light on the navy footer, light over dark heroes). Replace `images/logo.svg` with your own mark. For a simple monochrome/silhouette logo it will recolour itself; if you have a **full-colour** logo, tell me and I'll switch the header to a plain `<img>` instead. |
+
 ## Home — index.html
 | File | Slot | Crop |
 |---|---|---|
@@ -44,11 +49,12 @@ suits the editorial-spa direction best.
 |---|---|---|
 | `practitioners-hero.jpg` | Page hero | landscape-hero |
 | `practitioners-intro.jpg` | "Chosen for craft" feature | portrait (3:4) |
-| `practitioner-1.jpg` | RMT — Practitioner One | portrait (3:4) |
-| `practitioner-2.jpg` | RMT — Practitioner Two | portrait (3:4) |
-| `practitioner-3.jpg` | RMT — Practitioner Three | portrait (3:4) |
-| `practitioner-4-acupuncturist.jpg` | Acupuncturist (Joining 2026) | portrait (3:4) |
-| `practitioner-5-naturopath.jpg` | Naturopathic Doctor (Joining 2026) | portrait (3:4) |
+
+The nine practitioner cards (Liza, Melanie, Jerry, Cayley, Jose, Summer,
+Paolo, Martin, Anthony) currently use the design's **gradient placeholders**
+— no stock faces are attached to real names. To add real headshots, send me
+a portrait (3:4) for each person and I'll wire them into named slots
+(`practitioner-liza.jpg`, `practitioner-melanie.jpg`, etc.).
 
 ## Journal — video.html
 | File | Slot | Crop |
