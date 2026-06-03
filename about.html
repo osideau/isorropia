@@ -19,12 +19,13 @@
         <span></span><span></span>
       </button>
       <nav class="nav" aria-label="Main">
-        <a href="index.html">Index</a>
+        <a href="index.html">Home</a>
         <a href="about.html" class="active">Practice</a>
         <a href="services.html">Disciplines</a>
         <a href="team.html">Practitioners</a>
         <a href="video.html">Journal</a>
         <a href="contact.html">Visit</a>
+        <a href="faq.html">FAQ</a>
         <a href="booking.html" class="nav-cta">Reserve</a>
       </nav>
     </div>
@@ -51,30 +52,7 @@
       </div>
     </section>
 
-    <!-- MISSION -->
-    <section class="section">
-      <div class="wrap">
-        <div class="split split--narrow">
-          <div class="split-text">
-            <span class="eyebrow rv">— Our mission</span>
-          </div>
-          <div class="split-text">
-            <p class="lead rv" data-delay="1">
-              At Isorropia, our commitment lies in the delivery of
-              evidence-based techniques and treatment focused on optimizing
-              patient wellness and supporting physiological recovery.
-            </p>
-            <p class="rv" data-delay="2">
-              We strive to create a therapeutic environment that promotes the
-              attainment of physical and psychological homeostasis for each
-              individual — the balance from which the practice takes its name.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHILOSOPHY: image + text -->
+    <!-- PHILOSOPHY: image + text (moved directly below hero) -->
     <section class="section">
       <div class="wrap">
         <div class="split split--narrow">
@@ -131,7 +109,7 @@
             </div>
           </div>
           <div class="discipline rv" data-delay="1">
-            <span class="discipline-name">Holistic well-being</span>
+            <span class="discipline-name"><em class="text-tan">Holistic</em> well-being</span>
             <div class="discipline-meta">
               <span class="discipline-desc">We recognize the interconnectedness of mind and body, creating a serene, supportive environment where physical and emotional balance can be achieved.</span>
             </div>
@@ -171,11 +149,41 @@
       </div>
     </section>
 
+    <!-- MISSION (moved above closing, with image) -->
+    <section class="section">
+      <div class="wrap">
+        <div class="split split--narrow split--reverse">
+          <div class="rv-img">
+            <div class="atmos atmos--tall atmos-2 atmos-wrap">
+              <img src="images/practitioners-intro.jpg" alt="Practitioners at Isorropia" loading="lazy" decoding="async" class="atmos-img">
+            </div>
+          </div>
+          <div class="split-text">
+            <span class="eyebrow rv">— Our mission</span>
+            <h2 class="rv" data-delay="1" style="margin-top: 1.5rem;">
+              Evidence-based,<br>
+              <em>patient-first.</em>
+            </h2>
+            <p class="lead rv" data-delay="2" style="margin-top: 2rem;">
+              At Isorropia, our commitment lies in the delivery of
+              evidence-based techniques and treatment focused on optimizing
+              patient wellness and supporting physiological recovery.
+            </p>
+            <p class="rv" data-delay="3">
+              We strive to create a therapeutic environment that promotes the
+              attainment of physical and psychological homeostasis for each
+              individual — the balance from which the practice takes its name.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CLOSING -->
     <section class="closing">
       <div class="wrap-text">
         <span class="eyebrow rv">— Continue</span>
-        <h2 class="rv" data-delay="1">
+        <h2 class="rv" data-delay="1" style="text-align: center;">
           <em>Meet</em> the practitioners.
         </h2>
         <div class="rv" data-delay="2" style="margin-top: 2rem;">
@@ -204,6 +212,17 @@
         <div class="footer-block">
           <h4>Reserve</h4>
           <ul><li><a href="booking.html">Book online</a></li><li>Direct billing</li><li><a href="contact.html">Reach us</a></li><li><a href="faq.html">FAQ &amp; policies</a></li></ul>
+        </div>
+        <div class="footer-block footer-newsletter">
+          <h4>Stay in touch</h4>
+          <p style="font-size: 0.85rem; color: rgba(235,228,214,0.6); margin-bottom: 1.2rem; line-height: 1.5;">A short occasional letter when we publish new work.</p>
+          <form data-contact style="display: flex; flex-direction: column; gap: 0.8rem;">
+            <div class="field" style="margin: 0;">
+              <label for="footer-email" style="color: rgba(235,228,214,0.5);">Email address</label>
+              <input type="email" id="footer-email" required style="border-bottom-color: rgba(235,228,214,0.3); color: var(--bone); background: transparent;">
+            </div>
+            <button type="submit" class="link link-arrow" style="color: var(--bone); border-bottom-color: var(--bone); align-self: flex-start;">Subscribe</button>
+          </form>
         </div>
       </div>
       <div class="footer-base">

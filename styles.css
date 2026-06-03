@@ -974,13 +974,17 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.4fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
   margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+  .footer-newsletter { grid-column: 1 / -1; }
 }
 @media (max-width: 720px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid > :first-child { grid-column: 1 / -1; }
 }
 
 .footer-block h4 {
@@ -1208,3 +1212,13 @@ p {
   color: var(--olive-mid);
   margin-top: 3rem;
 }
+
+
+/* ---------- Plain page hero — ensure header stays legible ---------- */
+.plain-hero .site-header {
+  background: var(--paper);
+  border-bottom: var(--hairline);
+}
+.plain-hero .site-header .brand { color: var(--olive-ink); }
+.plain-hero .site-header .nav a { color: var(--olive-mid); }
+.plain-hero .page-hero h1 { max-width: 100%; }
