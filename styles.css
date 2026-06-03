@@ -192,6 +192,15 @@ p {
 .section-sm {
   padding-block: clamp(2rem, 4vw, 3.5rem);
 }
+.section > .wrap,
+.section-sm > .wrap,
+.section-lg > .wrap {
+  text-align: center;
+}
+.split-text,
+.split-text * {
+  text-align: left;
+}
 .section-lg {
   padding-block: clamp(5rem, 12vw, 11rem);
 }
@@ -792,6 +801,7 @@ p {
   align-items: flex-end;
   gap: 0.5rem;
 }
+.discipline-meta * { text-align: right; }
 .discipline-status {
   font-size: 0.65rem;
   letter-spacing: 0.22em;
@@ -958,7 +968,8 @@ p {
 .closing h2 {
   font-style: italic;
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  font-size: clamp(3rem, 9vw, 8rem);
+  font-size: clamp(2rem, 6vw, 6rem);
+  white-space: nowrap;
 }
 .closing .eyebrow {
   margin-bottom: 1.5rem;
@@ -1240,4 +1251,4 @@ p {
 .plain-hero .site-header .nav-cta:hover { color: var(--tan) !important; border-bottom-color: var(--tan) !important; }
 .plain-hero .site-header .menu-toggle span { background: var(--bone); }
 .plain-hero .page-hero { padding-top: clamp(9rem, 15vw, 13rem); }
-.plain-hero .page-hero h1 { max-width: 100%; }
+.plain-hero .page-hero h1 { max-width: 100%; white-space: nowrap; font-size: clamp(2.5rem, 7vw, 6rem); }
