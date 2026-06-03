@@ -211,12 +211,23 @@ p {
   transition: background var(--med) var(--ease), padding var(--med) var(--ease);
 }
 .site-header.scrolled {
-  background: rgba(241, 235, 222, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(26, 34, 56, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding-block: 1rem;
-  border-bottom: var(--hairline-soft);
+  border-bottom: none;
 }
+/* When scrolled, always show light nav text */
+.site-header.scrolled .brand { color: var(--bone) !important; }
+.site-header.scrolled .brand em { color: var(--tan) !important; }
+.site-header.scrolled .nav a { color: rgba(241, 235, 222, 0.82) !important; }
+.site-header.scrolled .nav a:hover,
+.site-header.scrolled .nav a.active { color: var(--bone) !important; }
+.site-header.scrolled .nav-cta {
+  color: var(--bone) !important;
+  border-bottom-color: rgba(241, 235, 222, 0.5) !important;
+}
+.site-header.scrolled .menu-toggle span { background: var(--bone) !important; }
 
 .site-header .wrap {
   display: flex;
@@ -449,7 +460,7 @@ p {
 }
 
 .hero h1 {
-  max-width: 14ch;
+  max-width: 22ch;
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 .hero h1,
@@ -464,6 +475,7 @@ p {
 }
 .page-hero--image h1 {
   margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+  max-width: 24ch;
 }
 
 .hero-actions {
@@ -529,7 +541,7 @@ p {
   padding-block: clamp(7rem, 12vw, 11rem) clamp(3rem, 6vw, 5rem);
 }
 .page-hero h1 {
-  max-width: 16ch;
+  max-width: 26ch;
 }
 .page-hero .lead {
   margin-top: clamp(2rem, 4vw, 3rem);
@@ -1224,7 +1236,8 @@ p {
 .plain-hero .site-header .nav a { color: rgba(241, 235, 222, 0.82); }
 .plain-hero .site-header .nav a:hover,
 .plain-hero .site-header .nav a.active { color: var(--bone); }
-.plain-hero .site-header .nav-cta { color: var(--bone); border-color: rgba(241,235,222,0.5); }
+.plain-hero .site-header .nav-cta { color: var(--bone) !important; border-bottom-color: rgba(241,235,222,0.5) !important; }
+.plain-hero .site-header .nav-cta:hover { color: var(--tan) !important; border-bottom-color: var(--tan) !important; }
 .plain-hero .site-header .menu-toggle span { background: var(--bone); }
 .plain-hero .page-hero { padding-top: clamp(9rem, 15vw, 13rem); }
 .plain-hero .page-hero h1 { max-width: 100%; }
