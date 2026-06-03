@@ -1214,11 +1214,17 @@ p {
 }
 
 
-/* ---------- Plain page hero — ensure header stays legible ---------- */
+/* ---------- Plain page hero — blue header ---------- */
 .plain-hero .site-header {
-  background: var(--paper);
-  border-bottom: var(--hairline);
+  background: #1a2238;
+  border-bottom: none;
 }
-.plain-hero .site-header .brand { color: var(--olive-ink); }
-.plain-hero .site-header .nav a { color: var(--olive-mid); }
+.plain-hero .site-header .brand { color: var(--bone); }
+.plain-hero .site-header .brand em { color: var(--tan); }
+.plain-hero .site-header .nav a { color: rgba(241, 235, 222, 0.82); }
+.plain-hero .site-header .nav a:hover,
+.plain-hero .site-header .nav a.active { color: var(--bone); }
+.plain-hero .site-header .nav-cta { color: var(--bone); border-color: rgba(241,235,222,0.5); }
+.plain-hero .site-header .menu-toggle span { background: var(--bone); }
+.plain-hero .page-hero { padding-top: clamp(9rem, 15vw, 13rem); }
 .plain-hero .page-hero h1 { max-width: 100%; }
