@@ -223,8 +223,20 @@ body::after {
 
 .footer-line a:hover { color: var(--mid); }
 
-/* Mobile: stack the form button below input on narrow screens */
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+  .headline {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .form-wrap {
+    max-width: 100%;
+  }
+
   .form-row {
     flex-direction: column;
     border-bottom: none;
@@ -234,6 +246,7 @@ body::after {
   .form-row input {
     border-bottom: 1px solid rgba(244,238,227,0.25);
     padding: 0.75rem 0;
+    font-size: 1rem;
   }
 
   .form-row:focus-within input {
@@ -241,13 +254,28 @@ body::after {
   }
 
   .form-row button {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     text-align: center;
     letter-spacing: 0.2em;
+    font-size: 0.75rem;
   }
 
   .footer-line {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
+    font-size: 0.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .footer-line .sep {
+    display: none;
+  }
+
+  .location {
+    font-size: 0.68rem;
+    padding: 0.45rem 1rem;
   }
 }
 </style>
@@ -279,8 +307,8 @@ body::after {
   </div>
 
   <p class="footer-line">
-    Questions? <a href="mailto:hello@isorropia.ca">hello@isorropia.ca</a>
-    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    Questions? <a href="mailto:info@isorropia.ca">info@isorropia.ca</a>
+    <span class="sep">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
     &copy; <span id="yr"></span> Isorropia Wellness Clinic
   </p>
 </div>
